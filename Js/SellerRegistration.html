@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seller Registration</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Custom CSS */
+    .form-group {
+      max-width: 400px; /* Reduce the width of the form fields */
+    }
+    .btn-register {
+    margin-bottom: 25px; /* Add margin to the top of the Register button */
+    margin-left: 318px;
+    
+  }
+  </style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Rifats Book Store</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="HomePage.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="SelectRegistrationType.html">Registration</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="LoginPage.html">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- Content -->
+  <div class="container">
+    <h1>Seller Registration</h1>
+    <form id="registrationForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter Your Name" required>
+      </div>
+      <div class="form-group">
+        <label for="name">Shop Name</label>
+        <input type="text" class="form-control" id="shopname" placeholder="Enter Your Shop Name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter Your Email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter Your Password" required>
+      </div>
+      <div class="form-group">
+        <label>Gender</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="Gender" id="male" value="Male" required>
+          <label class="form-check-label" for="male">
+            Male
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="Gender" id="female" value="Female" required>
+          <label class="form-check-label" for="female">
+            Female
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="number" class="form-control" id="phone" placeholder="Enter Your Phone Number" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Address</label>
+        <textarea class="form-control" id="address" rows="4" placeholder="Enter the shop address"required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="dob">Join Date</label>
+        <input type="date" class="form-control" id="joined" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-register">Register</button>
+    </form>
+  </div>
+
+  <script src="Backend/SellerRegistration.js"></script>
+  <!-- Footer -->
+  <footer class="bg-primary text-white text-center py-3 sticky-bottom">
+    <div class="container">
+      <p>&copy; 2023 Your Website. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

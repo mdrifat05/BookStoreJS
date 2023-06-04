@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Books</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Custom CSS */
+    .form-group {
+      max-width: 400px; /* Reduce the width of the form fields */
+    }
+    .btn-register {
+    margin-bottom: 25px; /* Add margin to the top of the Register button */
+    margin-left: 318px;
+    
+  }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Rifats Book Store</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="SellerDashboard.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="SellerProfile.html">Profile</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="AddBooks.html">Add Books</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="LoginPage.html" onclick="logout()">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="container">
+    <h1>Add Books</h1>
+    <form id="addbookForm">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" placeholder="Enter the book title" required>
+      </div>
+      <div class="form-group">
+        <label for="author">Author</label>
+        <input type="text" class="form-control" id="author" placeholder="Enter the author's name" required>
+      </div>
+      <div class="form-group">
+        <label for="genre">Genre</label>
+        <select class="form-control" id="genre" required>
+          <option value="">Select Genre</option>
+          <option value="Action">Action</option>
+          <option value="Adventure">Adventure</option>
+          <option value="Animation">Animation</option>
+          <option value="Biography">Biography</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Documentary">Documentary</option>
+          <option value="Drama">Drama</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Horror">Horror</option>
+          <option value="Historical">Historical</option>
+          <option value="Mystery">Mystery</option>
+          <option value="Science Fiction">Science Fiction</option>
+          <option value="Thriller">Thriller</option>
+          <option value="Romance">Romance</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input type="number" class="form-control" id="price" placeholder="Enter the book price" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea class="form-control" id="description" rows="4" placeholder="Enter the book description"
+          required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="quantity">Quantity</label>
+        <input type="number" class="form-control" id="quantity" placeholder="Enter the book quantity" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-register">Add Book</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white text-center py-3 sticky-bottom">
+    <div class="container">
+      <p>&copy; 2023 Your Website. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="Backend/AddBooks.js"></script>
+  <script src="Backend/Logout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Rifats Book Store</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="CustomerDashboard.html">Home </a> 
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="CustomerProfile.html">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Orderbooks.html">Ordered Books</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="LoginPage.html" onclick="logout()">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+  <!-- Content -->
+  <div class="container mt-4">
+    <h1>Book List</h1>
+    <table class="table mt-4">
+      <thead>
+        <tr>
+          <th>Shop Name</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Genre</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="book-table-body">
+      </tbody>
+    </table>
+
+<!-- Include Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Pagination -->
+<nav aria-label="Book List Pagination">
+  <ul class="pagination justify-content-center" id="pagination-container">
+    <li class="page-item" id="previous-page">
+      <a class="page-link" href="#" tabindex="-1">Prev</a>
+    </li>
+    <!-- Dynamically generated page links will be added here -->
+    <li class="page-item" id="next-page">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white text-center py-3 fixed-bottom">
+    <p>&copy; 2023 Your Website. All rights reserved.</p>
+  </footer>
+  <!-- Include Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="Backend/CustomerDashboardBookList.js"></script>
+  <script src="Backend/Logout.js"></script>
+</body>
+
+</html>

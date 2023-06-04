@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    table {
+      margin: 20px auto;
+      width: 80%;
+    }
+    th,
+    td {
+      padding: 10px;
+    }
+    .search {
+    margin-left: 700px;
+    
+  }
+  </style>
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Rifats Book Store</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="SellerDashboard.html">Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="SellerProfile.html">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="AddBooks.html">Add Books</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="LoginPage.html" onclick="logout()">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Content -->
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-6">
+        <h1>Books</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <button id="delete-selected-button" class="btn btn-danger btn-sm ml-2" onclick="deleteSelectedBooks()">Delete Selected</button>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <input type="text" id="search-bar" class="form-control search" placeholder="Search by book title">
+      </div>
+    </div>
+    <table class="table mt-4">
+      <thead>
+        <tr>
+          <th><input type="checkbox" id="select-all-checkbox" class="checkbox"></th> <!-- Checkbox column -->
+          <th>ID</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Genre</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Action</th>
+        </tr>
+      </thead>      
+      <tbody id="book-table-body">
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white text-center py-3 sticky-bottom">
+    <p>&copy; 2023 Your Website. All rights reserved.</p>
+  </footer>
+  <script src="Backend/SellerDashboardCRUD.js"></script>
+  <script src="Backend/Logout.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Rifats Book Store</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="HomePage.html">Home </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="SelectRegistrationType.html">Registration</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="LoginPage.html">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div style="display: flex; justify-content: center; align-items: center; height: 60vh;">
+    <select class="custom-select custom-select-lg" style="width: 250px;" onchange="navigateToOption(this)">
+      <option selected>Select an option</option>
+      <option value="CustomerRegistration.html">Registration - Customer</option>
+      <option value="SellerRegistration.html">Registration - Seller</option>
+    </select>
+  </div>
+  
+  <script>
+    function navigateToOption(select) {
+      var selectedOption = select.value;
+      switch (selectedOption) {
+        case "CustomerRegistration.html":
+          window.location.href = "F:/BookShop/CustomerRegistration.html";
+          break;
+        case "SellerRegistration.html":
+          window.location.href = "F:/BookShop/SellerRegistration.html";
+          break;
+        default:
+          // Handle default case or do nothing
+          break;
+      }
+    }
+  </script>
+  <!-- Footer -->
+  <footer class="bg-primary text-white text-center py-3 fixed-bottom">
+    <p>&copy; 2023 Your Website. All rights reserved.</p>
+  </footer>
+</body>
+</html>
